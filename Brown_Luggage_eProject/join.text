@@ -1,0 +1,204 @@
+-- Tạo bảng users
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    phone VARCHAR(20),
+    address VARCHAR(255),
+    city VARCHAR(255),
+    role ENUM('customer', 'admin') DEFAULT 'customer',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    remember_token VARCHAR(255)
+);
+
+-- Tạo bảng brands
+CREATE TABLE brands (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+-- Tạo bảng categories
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+-- Tạo bảng colors
+CREATE TABLE colors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    hex_code VARCHAR(100)
+);
+
+-- Tạo bảng sizes
+CREATE TABLE sizes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
+);
+
+-- Tạo bảng products
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    category_id INT,
+    brand_id INT,
+    price INT NOT NULL,
+    gender ENUM('male', 'female', 'unisex'),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (category_id) REFERENCES categories(id),
+    FOREIGN KEY (brand_id) REFERENCES brands(id)
+);
+
+-- Tạo bảng product_colors
+CREATE TABLE product_colors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT,
+    color_id INT,
+    FOREIGN KEY (product_id) REFERENCES products(id),
+    FOREIGN KEY (color_id) REFERENCES colors(id)
+);
+
+-- Tạo bảng product_sizes
+CREATE TABLE product_sizes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT,
+    size_id INT,
+    FOREIGN KEY (product_id) REFERENCES products(id),
+    FOREIGN KEY (size_id) REFERENCES sizes(id)
+);
+
+-- Tạo bảng product_images
+CREATE TABLE product_images (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT,
+    image_url VARCHAR(255) NOT NULL,
+    u_primary TINYINT(1) DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+-- Tạo bảng detail_product_images
+CREATE TABLE detail_product_images (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_image_id INT,
+    product_id INT,
+    image_url VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (product_image_id) REFERENCES product_images(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+-- Tạo bảng orders
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    status ENUM('pending', 'processing', 'shipped', 'completed', 'cancelled') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fullname VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone_number VARCHAR(20),
+    address TEXT NOT NULL,
+    note TEXT,
+    total_money DECIMAL(10,2) NOT NULL,
+    payment_status ENUM('pending', 'completed') DEFAULT 'pending',
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+-- Tạo bảng order_items
+CREATE TABLE order_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    quantity INT NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    total_money DECIMAL(10,2) NOT NULL,
+    payment_method ENUM('online', 'cash'),
+    color_id INT,
+    size_id INT,
+    FOREIGN KEY (order_id) REFERENCES orders(id),
+    FOREIGN KEY (product_id) REFERENCES products(id),
+    FOREIGN KEY (color_id) REFERENCES colors(id),
+    FOREIGN KEY (size_id) REFERENCES sizes(id)
+);
+
+-- Tạo bảng payments
+CREATE TABLE payments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    amount DECIMAL(10,2) NOT NULL,
+    status ENUM('pending', 'completed', 'failed') DEFAULT 'pending',
+    payment_method ENUM('credit_card', 'paypal', 'bank_transfer', 'cod'),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_id) REFERENCES orders(id)
+);
+
+-- Tạo bảng carts
+CREATE TABLE carts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    product_id INT,
+    quantity INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    color_id INT,
+    size_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (product_id) REFERENCES products(id),
+    FOREIGN KEY (color_id) REFERENCES colors(id),
+    FOREIGN KEY (size_id) REFERENCES sizes(id)
+);
+
+-- Tạo bảng feedbacks
+CREATE TABLE feedbacks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    product_id INT,
+    message TEXT,
+    rating INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending',
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+-- Tạo bảng contacts
+CREATE TABLE contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    subject ENUM('Support', 'Complaint', 'Inquiry', 'Suggestion') NOT NULL,
+    message TEXT NOT NULL
+);
+
+
+insert into brands
+values
+('Larita'),
+('Pisani'),
+('Austin Reed'),
+('Epoch'),
+('Heys'),
+('Herschel')
+
+insert into categories 
+values
+('Vali'),
+('Balo'),
+('Túi sách'),
+('Phụ kiện')
+
+insert into colors
+values
+('red', '#FF3000'),
+('lime', '#00FF00'),
+('blue', '#0000FF'),
+('yellow', '#FFFF00'),
+('black', '#000000'),
+
+insert into detail_product_images
+values 
+(2, 1, 'image/index/detail1_vali1.jpg'),
+(2, 1, 'image/index/vali1_detail2.jpg')
+
+

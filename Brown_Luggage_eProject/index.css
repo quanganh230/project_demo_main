@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Slogan */
+.slogan {
+   
+    height: auto;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background-color: #DC5333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.search-bar {
+    transition: width 0.3s ease-in-out;
+    width: 40px;
+}
+
+.search-bar:focus {
+    width: 250px;
+}
+.icon-bar a i {
+    font-size: 1.45rem;
+    color: #fff;
+    margin: 0 0.3125rem;
+    cursor: pointer;
+    
+}
+
+header .logo span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.875rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: text-decoration 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a.outlet {
+    color: #FFEB0C;
+}
+
+nav ul li a.outlet:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #fff;
+    padding: 0 1.25rem;
+    overflow: hidden;
+}
+
+.hero img {
+    text-align: center;
+    
+}
+
+.main-banner {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+    
+}
+
+
+
+.custom-nav .nav-link {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-nav .nav-link:hover {
+  text-decoration: underline; /* Nền xám đậm hơn khi hover */
+  text-decoration-color:#dc5333;
+  text-decoration-thickness: 2px;
+      transform: scale(1.05);
+}
+
+
+/* Nếu bạn vẫn muốn giữ .img_special (dù không thấy sử dụng trong HTML) */
+.carousel .row.g-0 {
+    justify-content: center; /* căn giữa ảnh trong hàng */
+  }
+
+  .carousel .col-6 {
+    padding: 0 5px; /* giảm khoảng cách giữa 2 ảnh */
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel img {
+    width: 100%; /* hoặc w-75 nếu bạn muốn nhỏ hơn */
+    max-width: 566px; /* chỉnh lại kích thước ảnh mong muốn */
+    height: auto;
+  }
+
+  .carousel {
+    max-width: 200rem; /* để căn giữa toàn bộ carousel */
+    margin: 0 auto;
+  }
+
+/* New Product Section */
+.new-product-box-group {
+    padding: 1.25rem;
+    background-color: #d6d6d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 93.7rem;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 60px;
+}
+
+/* Danh sách nav */
+.nav-product {
+    display: flex;
+    justify-content: space-evenly; /* Cách đều cả trái/phải/lẫn giữa */
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều ngang cha */
+}
+
+/* Các item trong nav chia đều */
+.nav-product li {
+    flex: 1;
+    text-align: center;
+}
+
+/* Style cho link */
+.nav-product li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Hover */
+.nav-product li a:hover {
+    
+    color: #DC5333;
+    
+}
+
+/* Active */
+.nav-product li.active a {
+    color: #DC5333;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .new-product-box-group {
+        max-width: 100%; /* Match the banner width on smaller screens */
+        padding: 0.9375rem;
+    }
+
+    .nav-product {
+        gap: 0.9375rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-product {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.9375rem;
+    }
+
+    .nav-product li.nav-flashsale img {
+        max-width: 15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-product li a {
+        font-size: 0.9rem;
+    }
+
+    .nav-product li.nav-flashsale img {
+        max-width: 12rem;
+    }
+
+    .new-product-box-group {
+        padding: 0.625rem;
+        min-height: 50px; /* Further reduce height */
+    }
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.25rem;
+    width: 78rem;
+    
+}
+
+footer p {
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 0.9375rem;
+        gap: 0.9375rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.9375rem;
+    }
+
+    .hero .img_special {
+        flex-direction: column;
+        gap: 0.9375rem;
+    }
+
+    .hero .img_special div {
+        max-width: 100%;
+    }
+
+    .hero .img_special img {
+        height: 18.75rem;
+    }
+
+    .nav-product {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo span {
+        font-size: 1.1rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .icon-bar i {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+/* login */
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.tabs button {
+background: none;
+border: none;
+font-size: 16px;
+cursor: pointer;
+color: #333;
+}
+
+.tabs button.active {
+color: orange;
+font-weight: bold;
+}
+.form-container {
+    width: 45%;
+}
+h2 {
+    text-transform: uppercase;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+button {
+    background-color: #f04e23;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.footer {
+    background: #dc4b1d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.tabs a button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.tabs a button.active {
+    background-color: white;
+    font-weight: bold;
+}
+label {
+    font-size: 14px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+    
+    .content {
+    flex: 1;
+    }
+
+
+    .color-options {
+        margin-bottom: 10px;
+    }
+    
+    .color-circle {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        margin-right: 5px;
+    }
+
+    .circle {
+        width: 20px; /* Kích thước hình tròn */
+        height: 20px;
+        border-radius: 50%; /* Tạo hình tròn */
+        margin-right: 10px; /* Khoảng cách giữa các chấm */
+    }
+
+

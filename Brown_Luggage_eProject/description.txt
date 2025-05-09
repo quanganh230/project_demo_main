@@ -1,0 +1,63 @@
+<div class="container mt-4"><div class="row"><div class="col-md-12"><div class="card shadow-sm"> <div class="card-body"><h2 class="card-title text-center mb-4" style="font-size: 24px; font-weight: bold;">MÔ TẢ SẢN PHẨM</h2><p class="text-muted mb-3" style="font-size: 16px;"> Được sản xuất từ những chất liệu cao cấp nhất, Herschel Classic là túi xách mang phong cách hiện đại với những đường nét tinh tế, kết hợp giữa những chất liệu cao cấp với thiết kế tinh tế:</p><ul class="list-group list-group-flush"><li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i>Ngăn lớn đựng đồ, tiện lợi sử dụng</li> <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i>Quai đeo êm, thoải mái</li> <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i>Khóa kéo kim loại bền bỉ</li></ul><p class="text-muted mt-3" style="font-size: 16px;">Màu sắc: <br>- Cam Kết Hàng Chính Hãng 100% - Phát Hiện Hàng Giả Đền 200% <br> - Miễn phí đổi trả trong 365 ngày <br>- Miễn phí giao hàng toàn quốc </p> </div> </div> </div></div></div> 
+
+đây là mô tả mẫu của balo (bên trên)
+
+<div class="container mt-4"><div class="row"><div class="col-md-12"><div class="card shadow-sm"> <div class="card-body"><h2 class="card-title text-center mb-4" style="font-size: 24px; font-weight: bold;">MÔ TẢ SẢN PHẨM</h2><p class="text-muted mb-3" style="font-size: 16px;"> Được sản xuất từ những chất liệu cao cấp ,và bền bỉ nhất, Larita là vali mang phong cách hiện đại với những đường nét tinh tế, kết hợp giữa những chất liệu cao cấp với thiết kế tinh tế:</p><ul class="list-group list-group-flush"><li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i>Có bánh xe xoay 360 độ, tay cầm chắc chắn </li> <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i>Ngăn chứa đồ khoa học dễ sắp xếp, có khóa an toàn (khóa TSA)</li> <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i>Trọng lượng nhẹ, nhưng vẫn đảm bảo độ bền bỉ</li></ul><p class="text-muted mt-3" style="font-size: 16px;">Màu sắc: <br>- Cam Kết Hàng Chính Hãng 100% - Phát Hiện Hàng Giả Đền 200% <br> - Miễn phí đổi trả trong 365 ngày <br>- Miễn phí giao hàng toàn quốc </p> </div> </div> </div></div></div> 
+
+đây là vali
+
+
+<div class="container mt-4"><div class="row"><div class="col-md-12"><div class="card shadow-sm"> <div class="card-body"><h2 class="card-title text-center mb-4" style="font-size: 24px; font-weight: bold;">MÔ TẢ SẢN PHẨM</h2><p class="text-muted mb-3" style="font-size: 16px;"> Được thiết kế đặc biệt dành riêng cho những buổi cuối tuần thật năng động và hứng khởi, Herschel Heritage TM Crossbody Weather Resistant trở thành vật bất ly thân cho mọi tín đồ đam mê thời trang.  </p><ul class="list-group list-group-flush"><li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i> Chất liệu vải EcoSystem™ 600D thân thiện với môi trường, kháng nước ưu việt</li> <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i>Ngăn lưu trữ đồ nhỏ gọn phía trước</li> <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i>Dây đai gài ấn tượng, chắc chắn</li><li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i>Quai đeo êm ái, thoáng khí</li></ul><p class="text-muted mt-3" style="font-size: 16px;">Màu sắc: <br>- Cam Kết Hàng Chính Hãng 100% - Phát Hiện Hàng Giả Đền 200% <br> - Miễn phí đổi trả trong 365 ngày <br>- Miễn phí giao hàng toàn quốc </p> </div> </div> </div></div></div> 
+ 
+ đây là túi xách
+
+ đây là phụ kiện 
+
+ <div class="container mt-4"><div class="row"><div class="col-md-12"><div class="card shadow-sm"> <div class="card-body"><h2 class="card-title text-center mb-4" style="font-size: 24px; font-weight: bold;">MÔ TẢ SẢN PHẨM</h2><p class="text-muted mb-3" style="font-size: 16px;"> Được sản xuất từ những chất liệu cao cấp ,và bền bỉ nhất, Phụ kiện của chúng tôi  mang phong cách hiện đại với những đường nét tinh tế, kết hợp giữa những chất liệu cao cấp với thiết kế tinh tế:</p><ul class="list-group list-group-flush"><li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i>Thiết kế nhỏ gọn , và phù hợp </li></ul><p class="text-muted mt-3" style="font-size: 16px;">Màu sắc: <br>- Cam Kết Hàng Chính Hãng 100% - Phát Hiện Hàng Giả Đền 200% <br> - Miễn phí đổi trả trong 365 ngày <br>- Miễn phí giao hàng toàn quốc </p> </div> </div> </div></div></div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
